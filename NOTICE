@@ -1,0 +1,17 @@
+Qwen is licensed under the Qwen RESEARCH LICENSE AGREEMENT,
+Copyright (c) Alibaba Cloud. All Rights Reserved.
+
+Improved using Qwen.
+
+This repository contains an independently trained PEFT/LoRA adapter for
+stanford-oval/churro-3B. It does not contain CHURRO or Qwen base-model weights
+and is not an official Stanford OVAL, Alibaba Cloud/Qwen, or Library of
+Congress release.
+
+Training and evaluation used public Library of Congress scans and official
+page transcripts from the LOC By the People reviewed export. Those source
+materials are not redistributed in this package. Consult each LOC collection
+record and rights statement before reusing source material.
+
+Generated OCR is unreviewed model output. It is not an official LOC
+transcript, reference label, or statement by the Library of Congress.

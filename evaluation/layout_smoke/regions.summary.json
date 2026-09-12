@@ -1,0 +1,8 @@
+{
+  "provenance_schema": "layout-region-provenance-v1",
+  "pages": 24,
+  "ocr_regions": 44,
+  "extra_region_inferences": 20,
+  "skip_nonmeaningful": false,
+  "note": "Release-safe aggregate; local paths and source scans are intentionally omitted."
+}

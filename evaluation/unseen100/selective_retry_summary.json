@@ -1,0 +1,35 @@
+{
+  "benchmark": "frozen reviewed LOC unseen100",
+  "examples": 100,
+  "policy": "continuous page budget plus streaming loop stop; one recovery only for structurally incomplete non-looping first passes",
+  "selective_retry_pages": 3,
+  "selective_retry_rate": 0.03,
+  "character_edits": 26644,
+  "target_characters": 121859,
+  "cer": 0.21864614021122772,
+  "word_edits": 6287,
+  "target_words": 22367,
+  "wer": 0.28108373943756426,
+  "incomplete_examples": 8,
+  "comparison": {
+    "no_retry": {
+      "cer": 0.24291188997119623,
+      "wer": 0.3009344123038405,
+      "elapsed_seconds": 4351.651433336,
+      "incomplete_examples": 10
+    },
+    "older_two_retry_policy": {
+      "cer": 0.2111866993820727,
+      "wer": 0.2790271381946618,
+      "elapsed_seconds": 4972.133410290001,
+      "retry_attempted_examples": 8,
+      "extra_generations": 16,
+      "incomplete_examples": 5
+    }
+  },
+  "notes": [
+    "The selective aggregate combines the completed 100-page no-retry run with an executed recovery run on the three policy-selected pages.",
+    "The policy used three extra generations rather than sixteen.",
+    "Reference transcripts are used only for evaluation metrics and are not inputs to inference."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "manifest_rows": 24,
+  "pages": 24,
+  "learned_item_layout_priors": {
+    "mss5186201": {
+      "left_rotation_ccw": 90,
+      "right_rotation_ccw": 270,
+      "supporting_pages": 9,
+      "opposed_evidence_pages": 9,
+      "eligible_wide_pages": 20,
+      "opposed_support_share": 1.0,
+      "eligible_support_share": 0.45,
+      "minimum_support_confidence": 0.47,
+      "supporting_page_ids": [
+        "mss5186201_page_0003",
+        "mss5186201_page_0008",
+        "mss5186201_page_0012",
+        "mss5186201_page_0013",
+        "mss5186201_page_0018",
+        "mss5186201_page_0019",
+        "mss5186201_page_0020",
+        "mss5186201_page_0023",
+        "mss5186201_page_0024"
+      ]
+    }
+  },
+  "transformed": 20,
+  "unchanged": 4,
+  "ambiguous": 3,
+  "mixed": 22,
+  "missing": 0,
+  "item_prior_applied": 11,
+  "split_opposed": 20,
+  "visually_upright_or_usable": 22,
+  "safely_abstained_unresolved": 2,
+  "generated_transforms_without_visible_text_cuts": 20,
+  "note": "Release-safe aggregate; local paths and source scans are intentionally omitted."
+}

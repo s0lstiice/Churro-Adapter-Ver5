@@ -1,0 +1,43 @@
+{
+  "epoch": 22,
+  "train_loss": 1.2574407664284981,
+  "train_cross_entropy": 0.9263394974601612,
+  "train_first_occurrence_loss": 1.2490331060898074,
+  "first_occurrence_examples": 2498,
+  "first_occurrence_positions": 473927,
+  "first_occurrence_boosted_positions": 210683,
+  "first_occurrence_boost_fraction": 0.444547366999559,
+  "train_anti_eos_loss": 0.0,
+  "train_anti_eos_violation_rate": 0.0,
+  "train_anti_close_loss": 0.0,
+  "anti_close_examples": 0,
+  "anti_close_positions": 0,
+  "train_anti_close_violation_rate": 0.0,
+  "train_visual_contrast_loss": 0.16524261428170745,
+  "train_correct_wrong_nll_margin": 2.003090185738285,
+  "visual_contrast_examples": 1271,
+  "visual_contrast_positions": 245688,
+  "visual_contrast_violation_rate": 0.4320357530668171,
+  "corrupted_prefix_examples": 318,
+  "corrupted_prefix_tokens": 1135,
+  "trained_pages": 2498,
+  "skipped_overlength": 2,
+  "validation_loss": 1.2022188445329667,
+  "validation_task_losses": {
+    "page": 1.2022188445329667
+  },
+  "validation_diagnostics": {
+    "cross_entropy": 0.8953076590895652,
+    "first_occurrence_loss": 1.2022188445329667,
+    "first_occurrence_positions": 48340,
+    "first_occurrence_boosted_positions": 21376,
+    "first_occurrence_boost_fraction": 0.44220107571369466,
+    "anti_eos_loss": 0.0,
+    "anti_eos_positions": 0,
+    "anti_eos_violation_rate": 0.0,
+    "anti_close_loss": 0.0,
+    "anti_close_positions": 0,
+    "anti_close_violation_rate": 0.0
+  },
+  "learning_rate": 0.0
+}
