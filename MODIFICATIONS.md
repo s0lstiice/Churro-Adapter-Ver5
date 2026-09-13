@@ -17,12 +17,12 @@ This repository is not an unmodified copy of CHURRO or Qwen2.5-VL.
   single selective recovery pass for structurally incomplete, non-looping
   pages. The packaged launchers use this instead of blanket repeat generation.
 
-On the frozen 100-page/100-item LOC benchmark, Epoch 22 with legacy decoding
+On the frozen 100-page/100-item LOC benchmark, Version 5 with legacy decoding
 measured 28.75% CER and 35.42% WER. The same adapter with grounded-faithful
 decoding measured 21.12% CER and 27.90% WER, reductions of 26.6% and 21.2%
 relative to the legacy-decoding result.
 
-## Epoch 22 adapter
+## Ver5 adapter
 
 - Contains independently trained rank-8 LoRA parameters for
   `stanford-oval/churro-3B`; upstream base weights are not redistributed.
