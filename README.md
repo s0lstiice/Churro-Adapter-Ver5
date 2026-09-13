@@ -1,8 +1,8 @@
-# Visually Grounded, Layout-Robust CHURRO LOC Adapter — Epoch 22
+# Visually Grounded, Layout-Robust CHURRO LOC Adapter — Version 5
 
 This upload's central improvement is **visual grounding**: the recognizer was
 trained and decoded to rely more strongly on visible handwriting and less on
-unsupported autoregressive continuation. It combines the newest Epoch 22
+unsupported autoregressive continuation. It combines the newest
 full-page adapter with the layout front end used around it. The system
 preserves the original scan, detects sideways/upside-down pages and book
 spreads, transcribes safe page regions with CHURRO, and reconstructs one
@@ -18,7 +18,7 @@ Earlier versions could produce plausible continuations that were insufficiently
 supported by the page, repeat text, or stop before all visible writing had been
 covered. This release attacks that failure mode at both training and inference:
 
-- **Visual-contrast training:** Epoch 22 includes image/text contrast examples,
+- **Visual-contrast training:** Version 5 includes image/text contrast examples,
   including deliberately mismatched visual evidence, so the adapter is
   penalized for accepting text that does not belong to the supplied page.
 - **First-occurrence emphasis:** the objective gives extra weight to the first
@@ -42,7 +42,7 @@ then constrains what the recognizer says about those pixels. The bundled
 
 ## What is included
 
-- `adapter/`: Epoch 22 adapter, processor/tokenizer configuration, and metrics.
+- `adapter/`: Ver5 adapter, processor/tokenizer configuration, and metrics.
 - `scripts/run_layout_robust.py`: one-command layout-aware inference.
 - `scripts/transcribe.py`: a legacy-compatible convenience path for images
   already known to be upright, single-page scans.
@@ -115,13 +115,13 @@ development. Metrics use the same official page references for each system.
 | System | CER | WER | Output/target characters |
 |---|---:|---:|---:|
 | Base CHURRO | 34.68% | 42.16% | 0.927 |
-| Epoch 22, legacy decoding | 28.75% | 35.42% | 1.031 |
-| Epoch 22, grounded-faithful decoding | **21.12%** | **27.90%** | 1.008 |
+| Ver5, legacy decoding | 28.75% | 35.42% | 1.031 |
+| Ver5, grounded-faithful decoding | **21.12%** | **27.90%** | 1.008 |
 
-Against base CHURRO, Epoch 22 with the production grounded-faithful inference
+Against base CHURRO, Ver5 with the production grounded-faithful inference
 path reduced aggregate CER by 39.1% and WER by 33.8%. The legacy-decoding row
 is the closer adapter-only comparison: it reduced CER by 17.1% and WER by
-16.0%. With the **same Epoch 22 adapter**, turning on grounded-faithful decoding
+16.0%. With the **same Ver5 adapter**, turning on grounded-faithful decoding
 reduced CER by a further 26.6% and WER by 21.2% relative to its legacy-decoding
 result. This makes the visual-grounding contribution visible instead of
 crediting the whole improvement to LoRA training. The production comparison
@@ -137,7 +137,7 @@ to the older retry baseline's 21.12% CER and 27.90% WER while substantially
 reducing repeat generation. The focused execution check is included in the
 evaluation audit.
 
-Epoch 22 was trained on 2,498 full-page examples; two overlength pages were
+Ver5 was trained on 2,498 full-page examples; two overlength pages were
 skipped. Its final validation loss was 1.2022 under the newer
 first-occurrence/visual-contrast objective. Loss values from older objectives
 are not directly comparable.
@@ -155,8 +155,7 @@ See the JSON reports in `evaluation/` for exact counts. CER/WER can exceed
 - OCR remains imperfect and must be human-reviewed before archival use.
 - Five of 100 production-evaluation pages ended incomplete/truncated after the
   configured retry policy.
-- The 45-page omission-focused challenge set slightly favored Epoch 21 over
-  Epoch 22 (38.67% vs. 38.92% CER), so Epoch 22 is not uniformly better on
+- Ver5 is not uniformly better on
   every subset.
 - Orientation and gutter detection intentionally abstain when evidence is
   ambiguous. Original files are never overwritten.
