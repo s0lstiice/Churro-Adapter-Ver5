@@ -81,6 +81,8 @@ evaluation; it is never needed for inference.
 {"page_id":"scan_0002","image":"/absolute/path/scan_0002.jpg"}
 ```
 
+Training/Eval Data: https://github.com/s0lstiice/Churro-Adapter-Ver5-Training-Validation-Data
+
 ## Run the newest system
 
 ```bash
